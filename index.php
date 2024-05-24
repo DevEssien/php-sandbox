@@ -1,3 +1,7 @@
+<?php
+echo "Essien Emmanuel PHP starter";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,6 +22,8 @@
     <div class="bg-white rounded-lg shadow-md p-6">
       <h2 class="text-2xl font-semibold mb-4"><?= 'Welcome to the course' ?></h2>
       <?= '<p>In this course, you will learn the fundamentals of the PHP language</p>' ?>
+      <?= "this is just a paragraph</p>" ?>
+      <p><?php echo "This is but another paragraph" ?></p>
     </div>
   </div>
 </body>
