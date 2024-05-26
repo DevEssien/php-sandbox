@@ -1,8 +1,12 @@
 <?php
-$numbers = [1, 2, 3, 4, 5];
-$sum = array_sum(($numbers));
-$arrayLen = count($numbers);
-$output = "The sum of the $arrayLen is $sum";
+$colors = ['red', 'blue', 'green', 'yellow'];
+$colors = array_reverse($colors);
+// $colors[] = 'purple';
+// $colors[] = 'orange';
+array_push($colors, 'purple', "orange");
+$colors[1] = "pink";
+array_pop($colors);
+$output = $colors;
 ?>
 
 <!DOCTYPE html>
