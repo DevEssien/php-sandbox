@@ -1,12 +1,41 @@
 <?php
-$colors = ['red', 'blue', 'green', 'yellow'];
-$colors = array_reverse($colors);
-// $colors[] = 'purple';
-// $colors[] = 'orange';
-array_push($colors, 'purple', "orange");
-$colors[1] = "pink";
-array_pop($colors);
-$output = $colors;
+$jobListings = [
+  [
+    "id" => 1,
+    "job_title" => "backend dev",
+    "company" => "tronweb",
+    "contact_email" => "tron@gmail.com",
+    "contact_phone" => "+234234566",
+    "skills" => ["php", "mysql", "python"]
+  ],
+  [
+    "id" => 2,
+    "job_title" => "fullstack dev",
+    "company" => "divergent",
+    "contact_email" => "div@gmail.com",
+    "contact_phone" => "+234435462",
+    "skills" => ["javascript", "mysql", "html", "css", "nodejs"]
+  ],
+  [
+    "id" => 3,
+    "job_title" => "frontend dev",
+    "company" => "MLH",
+    "contact_email" => "mlh@gmail.com",
+    "contact_phone" => "+1434534566",
+    "skills" => ["reactjs", "css", "javascript", "html"]
+  ],
+];
+
+$jobListings[] = [
+  "id" => 4,
+  "job_title" => "frontend dev",
+  "company" => "Google",
+  "contact_email" => "google@gmail.com",
+  "contact_phone" => "+1235223",
+  "skills" => ["reactjs", "css", "javascript", "html", "angular", "vuejs"]
+];
+
+$output;
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +51,12 @@ $output = $colors;
   <main>
     <h1> Arrays: </h1>
     <pre>
-      <p><?php print_r($output) ?></p>
+      <p><?php
+          print_r($jobListings);
+          echo $jobListings[1]["job_title"];
+          echo "<br />";
+          echo $jobListings[2]["skills"][0];
+          ?></p>
     </pre>
   </main>
 </body>
