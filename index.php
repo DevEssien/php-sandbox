@@ -1,64 +1,40 @@
 <?php
-$jobListings = [
-  [
-    "id" => 1,
-    "job_title" => "backend dev",
-    "company" => "tronweb",
-    "contact_email" => "tron@gmail.com",
-    "contact_phone" => "+234234566",
-    "skills" => ["php", "mysql", "python"]
-  ],
-  [
-    "id" => 2,
-    "job_title" => "fullstack dev",
-    "company" => "divergent",
-    "contact_email" => "div@gmail.com",
-    "contact_phone" => "+234435462",
-    "skills" => ["javascript", "mysql", "html", "css", "nodejs"]
-  ],
-  [
-    "id" => 3,
-    "job_title" => "frontend dev",
-    "company" => "MLH",
-    "contact_email" => "mlh@gmail.com",
-    "contact_phone" => "+1434534566",
-    "skills" => ["reactjs", "css", "javascript", "html"]
-  ],
-];
-
-$jobListings[] = [
-  "id" => 4,
-  "job_title" => "frontend dev",
-  "company" => "Google",
-  "contact_email" => "google@gmail.com",
-  "contact_phone" => "+1235223",
-  "skills" => ["reactjs", "css", "javascript", "html", "angular", "vuejs"]
-];
-
-$output;
+$title = "Learn PHP From Scratch";
+$heading = "Welcome to the course";
+$firstName = 'john';
+$lastName = 'doe';
+$fullName = "$firstName $lastName";
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><?php echo "Testing" ?></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title><?= $title ?></title>
 </head>
 
-<body>
-  <main>
-    <h1> Arrays: </h1>
-    <pre>
-      <p><?php
-          print_r($jobListings);
-          echo $jobListings[1]["job_title"];
-          echo "<br />";
-          echo $jobListings[2]["skills"][0];
-          ?></p>
-    </pre>
-  </main>
+<body class="bg-gray-100">
+  <header class="bg-blue-500 text-white p-4">
+    <div class="container mx-auto">
+      <h1 class="text-3xl font-semibold"><?= $title ?></h1>
+    </div>
+  </header>
+  <div class="container mx-auto p-4 mt-4">
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <h2 class="text-2xl font-semibold mb-4"><?= $heading ?></h2>
+      <p>
+        <?= $fullName ?>
+      <ul>
+        <?php for ($i = 0; $i <= 10; $i++) : ?>
+          <li>Number: <?= $i ?></li>
+        <?php endfor ?>
+      </ul>
+      </p>
+    </div>
+  </div>
 </body>
 
 </html>
