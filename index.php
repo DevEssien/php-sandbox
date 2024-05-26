@@ -1,9 +1,8 @@
 <?php
-$user = [
-  "name" => "Emmanuel",
-  "email" => "e@gmail.com"
-];
-$user['name']
+$numbers = [1, 2, 3, 4, 5];
+$sum = array_sum(($numbers));
+$arrayLen = count($numbers);
+$output = "The sum of the $arrayLen is $sum";
 ?>
 
 <!DOCTYPE html>
@@ -19,7 +18,7 @@ $user['name']
   <main>
     <h1> Arrays: </h1>
     <pre>
-      <p><?php var_dump($user) ?></p>
+      <p><?php print_r($output) ?></p>
     </pre>
   </main>
 </body>
